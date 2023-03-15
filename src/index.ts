@@ -116,7 +116,15 @@ const subtNum: Mathfuc = (x:number,y:number):number =>  x-y
 
 //CLASSES
 
-class Student{
+interface studentInterface{
+    id:number
+    name:string
+    age:number
+    hasPassed:boolean
+    register():string
+}
+
+class Student implements studentInterface{
     id:number
     name:string
     age:number
@@ -129,13 +137,30 @@ class Student{
         this.hasPassed = hasPassed
     }
 
+    register(){
+        return `${this.name} is Registered.`
+    }
+
 }
 
 
 const student1 = new Student( 58, 'Amen' , 23 , true)
 const student2 = new Student( 63, 'Joe' , 23 , true)
 
-console.log(student1,student2)
+// Data Modifiers (PUBLIC VS PRIVATE VS PROTECTED)
+
+student1.id = 69; // Works on Public | Won't work on Protected or Private
+
+console.log(student1.register());
+
+
+
+
+
+
+
+
+
 
 
 

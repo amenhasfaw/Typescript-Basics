@@ -59,7 +59,6 @@ const clientINTERFACE = {
 };
 const multNum = (x, y) => x * y;
 const subtNum = (x, y) => x - y;
-//CLASSES
 class Student {
     constructor(id, name, age, hasPassed) {
         this.id = id,
@@ -67,7 +66,12 @@ class Student {
             this.age = age,
             this.hasPassed = hasPassed;
     }
+    register() {
+        return `${this.name} is Registered.`;
+    }
 }
 const student1 = new Student(58, 'Amen', 23, true);
 const student2 = new Student(63, 'Joe', 23, true);
-console.log(student1, student2);
+// Data Modifiers (PUBLIC VS PRIVATE VS PROTECTED)
+student1.id = 69; // Works on Public | Won't work on Protected or Private
+console.log(student1.register());
