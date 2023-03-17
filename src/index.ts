@@ -11,3 +11,5 @@ let id: number = 10;
 //tsconfig.json
 // Changed outdir to ./dist
 // Changed root directory to ./src
+
+console.log('id: ', id)
