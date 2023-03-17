@@ -27,3 +27,47 @@ let userid;
 userid = 20;
 userid = 'CD058';
 //Enum
+var Direction1;
+(function (Direction1) {
+    Direction1[Direction1["up"] = 0] = "up";
+    Direction1[Direction1["down"] = 1] = "down";
+    Direction1[Direction1["left"] = 2] = "left";
+    Direction1[Direction1["right"] = 3] = "right";
+})(Direction1 || (Direction1 = {}));
+console.log(Direction1.up, Direction1.down, Direction1.left, Direction1.right); // 0 1 2 3
+const client = {
+    id: 10,
+    name: 'John'
+};
+//Type Assertion 
+let cid = 1;
+//Changing the type to a specific one
+let customerID = cid;
+//or
+let customerId = cid;
+//Function
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(3, 5));
+function log(message) {
+    console.log(message);
+}
+const clientINTERFACE = {
+    id: 10,
+    name: 'John'
+};
+const multNum = (x, y) => x * y;
+const subtNum = (x, y) => x - y;
+//CLASSES
+class Student {
+    constructor(id, name, age, hasPassed) {
+        this.id = id,
+            this.name = name,
+            this.age = age,
+            this.hasPassed = hasPassed;
+    }
+}
+const student1 = new Student(58, 'Amen', 23, true);
+const student2 = new Student(63, 'Joe', 23, true);
+console.log(student1, student2);

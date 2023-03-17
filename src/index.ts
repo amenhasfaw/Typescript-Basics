@@ -44,6 +44,99 @@ userid = 'CD058'
 
 //Enum
 
+enum Direction1 {
+    up,
+    down,
+    left,
+    right,
+}
+
+console.log(Direction1.up,Direction1.down,Direction1.left,Direction1.right);  // 0 1 2 3
+
+
+//Objects
+
+type User = {
+    id: number
+    name: string
+}
+
+
+const client: { id: number, name: string } | User = {
+    id: 10,
+    name: 'John'
+}
+
+
+//Type Assertion 
+
+let cid: any = 1;
+
+   //Changing the type to a specific one
+let customerID = <number>cid 
+//or
+let customerId = cid as number
+
+
+//Function
+
+function addNum(x:number,y:number):number{
+    return x + y
+}
+
+console.log(addNum(3,5))
+
+function log(message:string | number):void{
+    console.log(message)
+}
+
+
+// Interface
+
+//Can't use Interface with Primitive and Inteface
+
+interface UserInterface{
+    id: number
+    name: string
+}
+
+
+const clientINTERFACE: { id: number, name: string } | UserInterface = {
+    id: 10,
+    name: 'John'
+}
+
+interface Mathfuc{
+    (x:number,y:number):number
+}
+
+const multNum: Mathfuc = (x:number,y:number):number =>  x*y
+const subtNum: Mathfuc = (x:number,y:number):number =>  x-y
+
+
+//CLASSES
+
+class Student{
+    id:number
+    name:string
+    age:number
+    hasPassed:boolean
+
+    constructor(id:number,name:string,age:number,hasPassed:boolean) {
+        this.id = id,
+        this.name = name,
+        this.age = age,
+        this.hasPassed = hasPassed
+    }
+
+}
+
+
+const student1 = new Student( 58, 'Amen' , 23 , true)
+const student2 = new Student( 63, 'Joe' , 23 , true)
+
+console.log(student1,student2)
+
 
 
 
