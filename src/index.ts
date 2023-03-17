@@ -1,6 +1,6 @@
 // Basic static typing in Typescript
 
-let id: number = 10;
+let idx: number = 10;
 
 // z = 'Hello World'  
 
@@ -12,4 +12,38 @@ let id: number = 10;
 // Changed outdir to ./dist
 // Changed root directory to ./src
 
-console.log('id: ', id)
+// Basic TypeScript Types
+
+let id: number = 5;
+let user: string = 'amen';
+let isHappy: boolean = true;
+let random: any = ''
+
+//Arrays
+let ids:number[] = [1,2,3,4,5]
+let array:any[] = [20,'hey',true]
+
+//Tuple
+let person: [number,string,boolean] = [1,'John',false] // with strict sequence checking
+let employees: [string,number,boolean][] 
+
+employees = [
+    ['Joe',20000,true],
+    ['Doe',10000,false],
+]
+
+
+
+//Union
+let userid:string | number
+
+userid = 20;
+userid = 'CD058'
+
+
+
+//Enum
+
+
+
+
