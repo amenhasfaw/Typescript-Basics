@@ -147,11 +147,31 @@ class Student implements studentInterface{
 const student1 = new Student( 58, 'Amen' , 23 , true)
 const student2 = new Student( 63, 'Joe' , 23 , true)
 
-// Data Modifiers (PUBLIC VS PRIVATE VS PROTECTED)
+    // Data Modifiers (PUBLIC VS PRIVATE VS PROTECTED)
 
 student1.id = 69; // Works on Public | Won't work on Protected or Private
 
 console.log(student1.register());
+
+    // Extending Classes
+
+class InternationalStudent extends Student{
+    country:string
+
+    constructor(id:number,name:string,age:number,hasPassed:boolean,country:string) {
+        super(id,name,age,hasPassed)
+        this.country = country
+    }
+
+}
+
+const student3 = new InternationalStudent(11,'Dave',20,true,'China')
+console.log(student3.register())
+
+
+// Generics
+
+
 
 
 
