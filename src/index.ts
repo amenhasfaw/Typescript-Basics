@@ -169,7 +169,20 @@ const student3 = new InternationalStudent(11,'Dave',20,true,'China')
 console.log(student3.register())
 
 
-// Generics
+// Generics?
+
+
+function createEle<T>(elm:T): T{
+    return elm
+}
+
+let eleOne = createEle<number>(20)
+let eleTwo = createEle<string>('string')
+    
+    //Placeholder for function. Somehow?
+
+
+
 
 
 

@@ -84,4 +84,10 @@ class InternationalStudent extends Student {
 }
 const student3 = new InternationalStudent(11, 'Dave', 20, true, 'China');
 console.log(student3.register());
-// Generics
+// Generics?
+function createEle(elm) {
+    return elm;
+}
+let eleOne = createEle(20);
+let eleTwo = createEle('string');
+//Placeholder for function. Somehow?
